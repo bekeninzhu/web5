@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop Tickets</title>
+<link rel="stylesheet" href="style.css">
+<script src="task3.js" defer></script>
+</head>
+<body><main>
+<nav><a href="task1.html">Game</a><a href="task2.html">Playlist</a><a href="task3.html">Tickets</a></nav>
+<h1>Workshop Tickets</h1>
+<p>Choose 10, 11 or 12 January 2027. 11 January is sold out. STUDENT10 gives 10% off.</p>
+<div class="layout"><form id="ticket-form">
+<p id="summary" role="alert"></p>
+<label for="event">Event</label><select id="event" required><option value="">Choose event</option><option value="coding">Coding Workshop</option><option value="design">Design Workshop</option></select><span class="error" id="event-error"></span>
+<label for="date">Date</label><input id="date" type="date" required min="2027-01-10" max="2027-01-12"><span class="error" id="date-error"></span>
+<label for="type">Ticket type</label><select id="type" required><option value="">Choose type</option><option value="standard">Standard - 3000 KZT</option><option value="vip">VIP - 6000 KZT</option></select><span class="error" id="type-error"></span>
+<label for="quantity">Quantity</label><input id="quantity" type="number" min="1" max="10" step="1" required><span class="error" id="quantity-error"></span>
+<label for="name">Full name</label><input id="name" type="text" minlength="3" maxlength="60" autocomplete="name" required><span class="error" id="name-error"></span>
+<label for="email">Email</label><input id="email" type="email" autocomplete="email" required><span class="error" id="email-error"></span>
+<label for="promo">Promo code (optional)</label><input id="promo" type="text" placeholder="STUDENT10"><span class="error" id="promo-error"></span>
+<button type="submit">Book ticket</button>
+</form><aside><h2>Live preview</h2><div id="preview" aria-live="polite"></div><div id="result" aria-live="polite"></div></aside></div>
+</main></body></html>
